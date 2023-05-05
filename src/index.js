@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './style/index.css';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+// import ScoreBoard from './components/ScoreBoard';
+// import ScoresOnTheBoard from './data/FakeData.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    {/* <ScoreBoard ScoresOnTheBoard={ScoresOnTheBoard.ScoresOnTheBoard} /> */}
   </React.StrictMode>
 );
 
