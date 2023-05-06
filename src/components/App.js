@@ -1,7 +1,7 @@
 import '../style/App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import ScoreBoardList from './scoreBoardList';
+import FlappyScoreBoardList from './flappyScoreBoardList';
+import RunScoreBoardList from './runScoreBoardList';
 import Navbar from './Navbar';
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
         <Navbar />
         <br />
         <Routes>
-          <Route path="/scoreboard" Component={ScoreBoardList} />
+          <Route path="/scoreboard/flappy" Component={FlappyScoreBoardList} />
+          <Route path="/scoreboard/run" Component={RunScoreBoardList} />
         </Routes>
       </div>
     </Router>

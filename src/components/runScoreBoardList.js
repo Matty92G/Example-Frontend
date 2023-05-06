@@ -8,9 +8,6 @@ const ScoreBoard = (props) => {
     <tr>
       <td>{props.score.name}</td>
       <td>{props.score.score}</td>
-      <td>
-        <img src={props.score.img} />
-      </td>
       <td>{props.score.date}</td>
     </tr>
   );
@@ -35,7 +32,7 @@ const ScoreBoard = (props) => {
 //   },
 // ];
 
-export default class ScoreBoardList extends Component {
+export default class RunScoreBoardList extends Component {
   constructor(props) {
     super(props);
 
@@ -44,7 +41,7 @@ export default class ScoreBoardList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3010/scoreboard/')
+      .get('https://arcade-backend.onrender.com/scoreboard/run')
       .then((response) => {
         this.setState({ scores: response.data });
       })
@@ -67,7 +64,6 @@ export default class ScoreBoardList extends Component {
             <tr>
               <th>Name</th>
               <th>Score</th>
-              <th>Image</th>
               <th>Date</th>
             </tr>
           </thead>
