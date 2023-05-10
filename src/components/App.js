@@ -1,8 +1,9 @@
 import '../style/app.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import ScoreBoardList from './scoreBoardList';
+import FlappyScoreBoardList from './flappyScoreBoardList';
+import RunScoreBoardList from './runScoreBoardList';
 import Navbar from './Navbar';
+import { useState } from 'react';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -12,7 +13,8 @@ function App() {
         <Navbar />
         <br />
         <Routes>
-          <Route path="/scoreboard" Component={ScoreBoardList} />
+          <Route path="/scoreboard/flappy" Component={FlappyScoreBoardList} />
+          <Route path="/scoreboard/run" Component={RunScoreBoardList} />
         </Routes>
       </div>{' '}
     </Router>

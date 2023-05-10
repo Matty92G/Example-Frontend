@@ -5,8 +5,11 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <Link to="/scoreboard" className="navbar-link">
-          ScoreBoardList
+        <Link to="/scoreboard/flappy" className="navbar-link">
+          Flappy ScoreBoardList
+        </Link>
+        <Link to="/scoreboard/run" className="navbar-link">
+          Run ScoreBoardList
         </Link>
       </nav>
     );
