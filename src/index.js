@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
+import User from './components/User';
 import App from './components/App';
+import SignIn from './components/SignIn';
 import reportWebVitals from './reportWebVitals';
 // import ScoreBoard from './components/ScoreBoard';
 // import ScoresOnTheBoard from './data/FakeData.json';
@@ -9,7 +11,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <User />
     <App />
+    <SignIn />
     {/* <ScoreBoard ScoresOnTheBoard={ScoresOnTheBoard.ScoresOnTheBoard} /> */}
   </React.StrictMode>
 );
