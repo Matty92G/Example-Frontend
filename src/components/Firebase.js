@@ -18,16 +18,38 @@ const provider = new GoogleAuthProvider();
 export const signInWithGoogle = () => {
   signInWithPopup(auth, provider)
     .then((result) => {
-      console.log(result.user);
-      const name = result.user.displayName;
-      const email = result.user.email;
-      const profilePic = result.user.photoURL;
+      const user = result.user;
+      const token = user.accessToken;
+      const name = user.displayName;
+      const email = user.email;
+      const profilePic = user.photoURL;
 
+      localStorage.setItem('token', token);
       localStorage.setItem('name', name);
       localStorage.setItem('email', email);
       localStorage.setItem('profilePic', profilePic);
+      console.log('token', token);
+      console.log('name', name);
+      console.log('email', email);
+      console.log('profilePic', profilePic);
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(function (error) {
+      console.log(error.code);
+      console.log(error.message);
     });
+};
+
+export const signOutWithGoogle = () => {
+  auth.signOut().then(
+    () => {
+      localStorage.clear('token');
+      localStorage.clear('name');
+      localStorage.clear('email');
+      localStorage.clear('profilePic');
+      console.log('Signout Succesfull');
+    },
+    (error) => {
+      console.log('Signout Failed' + error);
+    }
+  );
 };

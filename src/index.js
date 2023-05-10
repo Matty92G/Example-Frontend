@@ -4,6 +4,7 @@ import './style/index.css';
 import User from './components/User';
 import App from './components/App';
 import SignIn from './components/SignIn';
+import SignOut from './components/SignOut';
 import reportWebVitals from './reportWebVitals';
 // import ScoreBoard from './components/ScoreBoard';
 // import ScoresOnTheBoard from './data/FakeData.json';
@@ -14,6 +15,7 @@ root.render(
     <User />
     <App />
     <SignIn />
+    <SignOut />
     {/* <ScoreBoard ScoresOnTheBoard={ScoresOnTheBoard.ScoresOnTheBoard} /> */}
   </React.StrictMode>
 );
